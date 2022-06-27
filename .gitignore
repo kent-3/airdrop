@@ -27,3 +27,4 @@ build
 .idea
 venv
 snapshot
+package-lock.json
