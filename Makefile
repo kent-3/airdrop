@@ -16,8 +16,8 @@ start-server: # CTRL+C to stop
 	docker run -it --rm \
 		-p 26657:26657 -p 26656:26656 -p 1317:1317 \
 		-v $$(pwd):/root/code \
-		-v $$(pwd)/../secret-secret:/root/secret-secret \
-		--name secretdev enigmampc/secret-network-sw-dev:v1.0.4
+		-v $$(pwd)/tests/secret-secret:/root/secret-secret \
+		--name localsecret ghcr.io/scrtlabs/localsecret
 
 .PHONY: start-server-detached
 start-server-detached:
